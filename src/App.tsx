@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import { Footer } from './components/Footer';
 import { Greetings } from './components/Greetings';
 import { Header } from './components/Header';
 import { HotSale } from './components/HotSale';
@@ -13,6 +14,7 @@ function App() {
         <Greetings />
         <HotSale />
         <Vacations />
+        <Footer />
       </main>
     </div>
   );

@@ -1,17 +1,14 @@
 import React from 'react';
+import { Socials } from '../Socials';
 import {
   CloseIcon,
   Hamburger,
   HeaderLogo,
   HeaderNav,
-  InstIcon,
   ItemLink,
   MenuIcon,
   NavList,
-  OkIcon,
-  SocialLinks,
-  StyledHeader,
-  VkIcon
+  StyledHeader
 } from './Header.styles';
 
 export const Header = () => {
@@ -42,23 +39,7 @@ export const Header = () => {
         </NavList>
       </HeaderNav>
       <div>
-        <SocialLinks>
-          <li>
-            <a>
-              <VkIcon />
-            </a>
-          </li>
-          <li>
-            <a>
-              <InstIcon />
-            </a>
-          </li>
-          <li>
-            <a>
-              <OkIcon />
-            </a>
-          </li>
-        </SocialLinks>
+        <Socials />
       </div>
     </StyledHeader>
   );
