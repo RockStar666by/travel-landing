@@ -3,6 +3,7 @@ import './App.css';
 import { Greetings } from './components/Greetings';
 import { Header } from './components/Header';
 import { HotSale } from './components/HotSale';
+import { Vacations } from './components/Vacations';
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <main>
         <Greetings />
         <HotSale />
+        <Vacations />
       </main>
     </div>
   );
