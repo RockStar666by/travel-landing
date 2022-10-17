@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import headerLogo from './../../assets/header-logo.svg';
 import vkIcon from './../../assets/vk-icon.svg';
 import instIcon from './../../assets/instagram-icon.svg';
 import okIcon from './../../assets/ok-icon.svg';
@@ -21,7 +22,7 @@ export const StyledHeader = styled.header`
 export const HeaderLogo = styled.div`
   width: 150px;
   height: 53px;
-  background: url('/assets/header-logo.svg');
+  background: url(${headerLogo});
 `;
 
 export const HeaderNav = styled.nav`
