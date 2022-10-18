@@ -1,5 +1,7 @@
 import React from 'react';
 import './App.css';
+import { ContactsForm } from './components/ContactsForm';
+import { ContactsMap } from './components/ContactsMap';
 import { Footer } from './components/Footer';
 import { Greetings } from './components/Greetings';
 import { Header } from './components/Header';
@@ -14,6 +16,8 @@ function App() {
         <Greetings />
         <HotSale />
         <Vacations />
+        <ContactsForm />
+        <ContactsMap></ContactsMap>
         <Footer />
       </main>
     </div>

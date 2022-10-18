@@ -14,6 +14,7 @@ export const StyledHeader = styled.header`
   background: white;
   border-radius: 0 0 10px 10px;
   z-index: 10;
+  box-shadow: 0px 3px 17px #00000029;
 `;
 
 export const HeaderLogo = styled.div`
