@@ -1,103 +1,89 @@
+import goaImage from './../assets/_Goa.png';
+import maroccoImage from './../assets/_Marokko.png';
+import uaeImage from './../assets/_UAE.png';
+
 export const countriesArray = [
   {
-    bgImage: '/countries/_Goa.png',
+    bgImage: `${goaImage}`,
     title: 'Индия',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_Marokko.png',
+    bgImage: `${maroccoImage}`,
     title: 'Марокко',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_UAE.png',
+    bgImage: `${uaeImage}`,
     title: 'ОАЭ',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_Goa.png',
+    bgImage: `${goaImage}`,
     title: 'Индия',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_Marokko.png',
+    bgImage: `${maroccoImage}`,
     title: 'Марокко',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_UAE.png',
+    bgImage: `${uaeImage}`,
     title: 'ОАЭ',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_Goa.png',
+    bgImage: `${goaImage}`,
     title: 'Индия',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_Marokko.png',
+    bgImage: `${goaImage}`,
+    title: 'Индия',
+    price: '330',
+    link: ''
+  },
+  {
+    bgImage: `${maroccoImage}`,
     title: 'Марокко',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_UAE.png',
+    bgImage: `${uaeImage}`,
     title: 'ОАЭ',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_Goa.png',
+    bgImage: `${goaImage}`,
     title: 'Индия',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_Marokko.png',
+    bgImage: `${maroccoImage}`,
     title: 'Марокко',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_UAE.png',
+    bgImage: `${uaeImage}`,
     title: 'ОАЭ',
     price: '330',
     link: ''
   },
   {
-    bgImage: '/countries/_Goa.png',
+    bgImage: `${goaImage}`,
     title: 'Индия',
-    price: '330',
-    link: ''
-  },
-  {
-    bgImage: '/countries/_Marokko.png',
-    title: 'Марокко',
-    price: '330',
-    link: ''
-  },
-  {
-    bgImage: '/countries/_UAE.png',
-    title: 'ОАЭ',
-    price: '330',
-    link: ''
-  },
-  {
-    bgImage: '/countries/_Goa.png',
-    title: 'Индия',
-    price: '330',
-    link: ''
-  },
-  {
-    bgImage: '/countries/_Marokko.png',
-    title: 'Марокко',
     price: '330',
     link: ''
   }

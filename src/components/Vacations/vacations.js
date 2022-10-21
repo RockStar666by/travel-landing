@@ -1,21 +1,26 @@
+import familyImage from '../../assets/vacations/family.png';
+import youthImage from '../../assets/vacations/youth.png';
+import excursionImage from '../../assets/vacations/excursion.png';
+import cruiseImage from '../../assets/vacations/cruise.png';
+
 export const vacationsArray = [
   {
-    bgImage: '/vacations/family.png',
+    bgImage: `${familyImage}`,
     title: 'СЕМЕЙНЫЙ',
     description: 'Спокойствие взрослым и развлечение детям'
   },
   {
-    bgImage: '/vacations/youth.png',
+    bgImage: `${youthImage}`,
     title: 'МОЛОДЕЖНЫЙ',
     description: 'Сваденые церемонии и лушчие тусовочные места'
   },
   {
-    bgImage: '/vacations/excursion.png',
+    bgImage: `${excursionImage}`,
     title: 'ЭКСКУРСИОННЫЙ',
     description: 'Уникальные маршруты и достопримечательности'
   },
   {
-    bgImage: '/vacations/cruise.png',
+    bgImage: `${cruiseImage}`,
     title: 'КРУИЗНЫЙ',
     description: 'Отдых \n премиум класса'
   }

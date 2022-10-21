@@ -6,6 +6,7 @@ import { Footer } from './components/Footer';
 import { Greetings } from './components/Greetings';
 import { Header } from './components/Header';
 import { HotSale } from './components/HotSale';
+import { Reviews } from './components/Reviews';
 import { Vacations } from './components/Vacations';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
         <Greetings />
         <HotSale />
         <Vacations />
+        <Reviews />
         <ContactsForm />
         <ContactsMap></ContactsMap>
         <Footer />

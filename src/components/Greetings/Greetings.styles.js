@@ -8,7 +8,7 @@ export const GreetingsContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  height: 650px;
   width: 100%;
   margin: auto;
   background: url(${greetingImage}) no-repeat center;
@@ -75,7 +75,7 @@ export const ArrowDown = styled.div`
       bottom: 50px;
     }
     50% {
-      bottom: 150px;
+      bottom: 100px;
     }
   }
 `;
