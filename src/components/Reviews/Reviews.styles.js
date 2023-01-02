@@ -132,6 +132,7 @@ export const GalleryImage = styled.img`
       opacity: 1;
     }
   }
+  animation: changeOpacity 1.5s;
 `;
 
 export const ReviewButton = styled.button`

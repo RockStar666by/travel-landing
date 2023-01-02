@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   CardImage,
   CardInfo,
@@ -14,28 +14,39 @@ import {
 import { countriesArray } from '../../assets/countries';
 
 export const HotSale = () => {
+  const [countriesNumber, setCountriesNumber] = useState(6);
+
+  const handleShowMore = () => {
+    setCountriesNumber(countriesNumber + 6);
+  };
+
   return (
-    <HotSalesContainer>
+    <HotSalesContainer id='hot-sale'>
       <HotSaleHeader>ГОРЯЩИЕ ТУРЫ</HotSaleHeader>
       <CountriesContainer>
-        {countriesArray.map(({ bgImage, title, price, link }, index) => {
-          return (
-            <CountryCard key={index}>
-              <CardImage
-                style={{
-                  backgroundImage: `url(${bgImage})`
-                }}
-              ></CardImage>
-              <CardInfo>
-                <CardTitle>{title}</CardTitle>
-                <CardPrice>от {price} у.е.</CardPrice>
-                <CardLink href={link}>УЗНАТЬ ПОДРОБНОСТИ</CardLink>
-              </CardInfo>
-            </CountryCard>
-          );
-        })}
+        {countriesArray
+          .slice(0, countriesNumber)
+          .map(({ bgImage, title, price, link }, index) => {
+            return (
+              <CountryCard key={index}>
+                <CardImage
+                  style={{
+                    backgroundImage: `url(${bgImage})`
+                  }}
+                ></CardImage>
+                <CardInfo>
+                  <CardTitle>{title}</CardTitle>
+                  <CardPrice>от {price} у.е.</CardPrice>
+                  <CardLink href={link}>УЗНАТЬ ПОДРОБНОСТИ</CardLink>
+                </CardInfo>
+              </CountryCard>
+            );
+          })}
       </CountriesContainer>
-      <ShowMore>
+      <ShowMore
+        disabled={countriesNumber >= countriesArray.length}
+        onClick={handleShowMore}
+      >
         <span>ПОКАЗАТЬ БОЛЬШЕ ТУРОВ</span>
       </ShowMore>
     </HotSalesContainer>

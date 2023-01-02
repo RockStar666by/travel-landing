@@ -24,10 +24,19 @@ export const Reviews = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [position, setPosition] = useState(0);
 
+  useEffect(() => {
+    const interval = setInterval(() => handleRightArrowClick(), 6000);
+    return () => clearTimeout(interval);
+  });
+
   const handleLeftArrowClick = () => {
     if (currentSlide > 0) {
       setCurrentSlide(currentSlide - 1);
       setPosition(position - 660);
+    }
+    if (currentSlide === 0) {
+      setCurrentSlide(slides.length - 1);
+      setPosition((slides.length - 1) * 660);
     }
     console.log(position);
   };
@@ -37,7 +46,10 @@ export const Reviews = () => {
       setCurrentSlide(currentSlide + 1);
       setPosition(position + 660);
     }
-    console.log(position);
+    if (currentSlide === slides.length - 1) {
+      setCurrentSlide(0);
+      setPosition(0);
+    }
   };
 
   const goToSlide = (slideIndex: number) => {
@@ -46,7 +58,7 @@ export const Reviews = () => {
   };
 
   return (
-    <ReviewsContainer>
+    <ReviewsContainer id='reviews'>
       <Slider>
         <SlidesContainer>
           <ArrowLeft onClick={handleLeftArrowClick} />
@@ -80,13 +92,7 @@ export const Reviews = () => {
       </Slider>
       <Gallery>
         {slides[currentSlide].photos.map((photo) => {
-          return (
-            <GalleryImage
-              key={Math.random()}
-              style={{ animation: 'changeOpacity 1.5s' }}
-              src={photo}
-            ></GalleryImage>
-          );
+          return <GalleryImage key={photo} src={photo}></GalleryImage>;
         })}
       </Gallery>
       <ReviewButton>ДОБАВИТЬ ОТЗЫВ</ReviewButton>

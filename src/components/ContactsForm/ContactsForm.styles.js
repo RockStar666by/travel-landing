@@ -21,6 +21,7 @@ export const FormContainer = styled.section`
   margin: auto;
   background: url(${bgImage}) no-repeat center;
   background-size: cover;
+  background-attachment: fixed;
   &:after {
     position: absolute;
     content: '';
@@ -71,7 +72,7 @@ export const Form = styled.form`
     border: 2px solid #17ba48;
   }
   li + li {
-    margin-top: 25px;
+    margin-top: 20px;
   }
 `;
 
@@ -86,4 +87,13 @@ export const FormButton = styled.button`
   line-height: 24px;
   font-size: 18px;
   font-weight: 500;
+`;
+
+export const ErrorMessage = styled.p`
+  height: 16px;
+  font-size: 14px;
+  border-radius: 5px;
+  color: white;
+  padding-left: 5px;
+  background: #cd3030;
 `;

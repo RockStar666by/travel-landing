@@ -12,7 +12,7 @@ import {
 
 export const Vacations = () => {
   return (
-    <VacationsContainer>
+    <VacationsContainer id='vacations'>
       <VacationsHeader>ВИДЫ ОТДЫХА</VacationsHeader>
       <VacationsList>
         {vacationsArray.map(({ bgImage, title, description }) => {

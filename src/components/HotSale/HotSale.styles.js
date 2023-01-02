@@ -30,8 +30,8 @@ export const CountriesContainer = styled.div`
   gap: 30px 15px;
   overflow: hidden;
   height: 100%;
-  max-height: 990px;
   transition: max-height 1s ease-in;
+  transform: scaleY(1);
 
   @media screen and (max-width: 1200px) {
     max-width: 835px;

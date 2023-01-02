@@ -7,12 +7,18 @@ export const GreetingsContainer = styled.section`
   position: relative;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   height: 650px;
   width: 100%;
   margin: auto;
-  background: url(${greetingImage}) no-repeat center;
-  background-size: cover;
+`;
+
+export const GreetingsBackgrounds = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   &::after {
     position: absolute;
     content: '';
@@ -25,17 +31,49 @@ export const GreetingsContainer = styled.section`
   }
 `;
 
+export const BackgroundWrapper = styled.div`
+  position: absolute;
+  display: inline-flex;
+  width: calc(${(props) => props.width}* 100%);
+  height: 100%;
+  ${(props) => (props.move !== 0 ? 'transition: 1s ease-in-out;' : '')}
+
+  transform: translateX(
+    calc(${(props) => props.move} * -100% / ${(props) => props.width})
+  );
+`;
+
+export const Background = styled.div`
+  height: 100%;
+  width: 100%;
+  background: url(${(props) => props.background}) no-repeat center;
+  background-size: cover;
+  background-attachment: fixed;
+`;
+
+export const GreetingsTopic = styled.h3`
+  z-index: 1;
+  margin-bottom: 20px;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-weight: 500;
+  color: white;
+  text-shadow: 0px 3px 6px #00000029;
+`;
+
 export const GreetingsHeader = styled.h1`
-  margin: 225px 70px 0;
   max-width: 1050px;
   color: #ffffff;
-  font-size: 32px;
+  font-size: 60px;
   line-height: 50px;
-  font-weight: 500;
+  font-family: 'Montserrat', 'Segoe UI', sans-serif;
+  font-weight: 800;
   text-align: center;
   text-shadow: 0px 3px 6px #00000029;
   white-space: pre-line;
   z-index: 1;
+  @media screen and (max-width: 640px) {
+    white-space: normal;
+  }
 `;
 
 export const CallButton = styled.button`
