@@ -39,9 +39,9 @@ export const ContactsContainer = styled.div`
     margin-bottom: 34px;
   }
 
-  ul li a i {
+  /* ul li a i {
     background-color: white;
-  }
+  } */
   @media screen and (max-width: 1200px) {
     left: 20px;
     height: 220px;

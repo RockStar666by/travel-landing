@@ -18,7 +18,7 @@ export const StyledHeader = styled.header`
   z-index: 10;
   box-shadow: 0px 3px 17px #00000029;
   @media screen and (max-width: 1200px) {
-    ul:nth-child(4) {
+    & ul:nth-child(5) {
       display: none;
     }
   }
