@@ -17,6 +17,11 @@ export const StyledHeader = styled.header`
   border-radius: 0 0 10px 10px;
   z-index: 10;
   box-shadow: 0px 3px 17px #00000029;
+  @media screen and (max-width: 1200px) {
+    ul:nth-child(4) {
+      display: none;
+    }
+  }
 `;
 
 export const HeaderLogo = styled.div`
@@ -72,8 +77,8 @@ export const NavList = styled.ul`
     }
     &.active {
       box-sizing: border-box;
-      border-bottom: 2px solid grey;
-      color: grey;
+      border-bottom: 2px solid #17ba48;
+      color: #17ba48;
     }
   }
 
@@ -86,13 +91,16 @@ export const NavList = styled.ul`
 
     li a {
       font-size: 30px;
+      line-height: 44px;
       height: 50px;
+      padding-left: 10px;
 
       &:hover {
         border: none;
       }
       &.active {
-        border: none;
+        border: 2px solid black;
+        border-right: none;
       }
     }
   }
@@ -120,6 +128,14 @@ export const Hamburger = styled.button`
   @media screen and (max-width: 1200px) {
     display: flex;
   }
+`;
+
+export const Overlay = styled.div`
+  position: absolute;
+  display: ${(props) => (props.isMenuOpened ? 'block' : 'none')};
+  width: 100vw;
+  height: 1000vh;
+  background-color: rgba(0, 0, 0, 0.4);
 `;
 
 export const MenuIcon = styled.i`

@@ -7,6 +7,7 @@ import {
   HeaderNav,
   MenuIcon,
   NavList,
+  Overlay,
   StyledHeader
 } from './Header.styles';
 import { Link } from 'react-scroll';
@@ -33,6 +34,7 @@ export const Header = () => {
         <MenuIcon isMenuOpened={isOpen} />
         <CloseIcon isMenuOpened={isOpen} />
       </Hamburger>
+      <Overlay isMenuOpened={isOpen} onClick={handleBurgerClick}></Overlay>
       <HeaderNav isMenuOpened={isOpen}>
         <NavList>
           <li>
@@ -91,9 +93,7 @@ export const Header = () => {
           </li>
         </NavList>
       </HeaderNav>
-      <div>
-        <Socials />
-      </div>
+      <Socials />
     </StyledHeader>
   );
 };

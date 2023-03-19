@@ -35,12 +35,10 @@ export const CountriesContainer = styled.div`
 
   @media screen and (max-width: 1200px) {
     max-width: 835px;
-    max-height: 1500px;
   }
 
   @media screen and (max-width: 640px) {
     max-width: 440px;
-    max-height: 3030px;
   }
 `;
 
@@ -50,6 +48,10 @@ export const CountryCard = styled.div`
   justify-content: center;
   width: 380px;
   height: 480px;
+  @media screen and (max-width: 440px) {
+    width: 280px;
+    height: 380px;
+  }
 `;
 
 export const CardImage = styled.div`
@@ -57,6 +59,10 @@ export const CardImage = styled.div`
   height: 310px;
   background: center no-repeat;
   background-size: cover;
+  @media screen and (max-width: 440px) {
+    width: 304px;
+    height: 248px;
+  }
 `;
 
 export const CardInfo = styled.div`
@@ -68,6 +74,10 @@ export const CardInfo = styled.div`
   padding: 0 26px;
   background: white;
   box-shadow: 0px 3px 17px #00000029;
+  @media screen and (max-width: 440px) {
+    width: 248px;
+    top: 180px;
+  }
 `;
 
 export const CardTitle = styled.h3`
@@ -105,6 +115,9 @@ export const CardLink = styled.a`
     color: white;
     background: #17ba48;
   }
+  @media screen and (max-width: 440px) {
+    line-height: unset;
+  }
 `;
 
 export const CardLinkSpan = styled.span``;
@@ -113,7 +126,8 @@ export const ShowMore = styled.button`
   margin-top: 30px;
   margin-bottom: 92px;
   height: 50px;
-  width: 350px;
+  max-width: 350px;
+  width: calc(100% - 40px);
   line-height: 50px;
   font-size: 18px;
   font-weight: 500;

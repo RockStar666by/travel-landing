@@ -17,16 +17,24 @@ export const SocialLinks = styled.ul`
     border: 1px solid #1773ba;
     border-radius: 50%;
   }
+  @media screen and (max-width: 500px) {
+    width: 30px;
+    height: 120px;
+    flex-direction: column;
+  }
 `;
 
 export const VkIcon = styled.i`
   background: url(${vkIcon}) center no-repeat;
+  cursor: pointer;
 `;
 
 export const InstIcon = styled.i`
   background: url(${instIcon}) center no-repeat;
+  cursor: pointer;
 `;
 
 export const OkIcon = styled.i`
   background: url(${okIcon}) center no-repeat;
+  cursor: pointer;
 `;

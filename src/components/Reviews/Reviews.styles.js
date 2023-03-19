@@ -6,35 +6,55 @@ export const ReviewsContainer = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 1126px;
   width: 100%;
   margin: auto;
   background: #f5f5f5;
 `;
 
 export const Slider = styled.div`
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   margin-top: 120px;
-  width: 940px;
+  padding: 0 30px;
+  max-width: 940px;
+  width: calc(100% - 60px);
   height: 430px;
+  @media screen and (max-width: 800px) {
+    height: 505px;
+  }
+  @media screen and (max-width: 516px) {
+    max-width: 650px;
+    height: 650px;
+  }
 `;
 
 export const SlidesContainer = styled.div`
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 940px;
-  height: 375px;
+  max-width: 940px;
+  width: 100%;
+  min-height: 375px;
 `;
 
 export const SlidesWrapper = styled.div`
   position: relative;
-  width: 660px;
+  max-width: 660px;
+  width: 100%;
   height: 375px;
   overflow: hidden;
+  @media screen and (max-width: 800px) {
+    max-width: 400px;
+    height: 450px;
+  }
+  @media screen and (max-width: 516px) {
+    max-width: 250px;
+    height: 600px;
+  }
 `;
 
 export const SlidesItems = styled.div`
@@ -48,7 +68,13 @@ export const Slide = styled.div`
   flex-direction: column;
   align-items: center;
   width: 660px;
-  height: 375px;
+  min-height: 375px;
+  @media screen and (max-width: 800px) {
+    width: 400px;
+  }
+  @media screen and (max-width: 516px) {
+    width: 250px;
+  }
 `;
 
 export const UserAvatar = styled.div`
@@ -63,6 +89,7 @@ export const UserHeader = styled.h3`
   margin-top: 50px;
   font-size: 32px;
   color: #17ba48;
+  text-align: center;
 `;
 
 export const UserReview = styled.p`
@@ -115,13 +142,22 @@ export const Gallery = styled.div`
   display: flex;
   justify-content: space-between;
   margin-top: 90px;
-  width: 1170px;
-  height: 275px;
+  padding: 0 20px;
+  gap: 20px;
+  max-width: 1170px;
+  width: calc(100% - 40px);
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 export const GalleryImage = styled.img`
-  width: 380px;
-  height: 275px;
+  aspect-ratio: 2/1;
+  max-width: 380px;
+  width: calc(100% / 3 - 20px);
+  max-height: 275px;
+  height: 20vw;
   object-fit: cover;
   border: 0;
   @keyframes changeOpacity {
@@ -133,13 +169,19 @@ export const GalleryImage = styled.img`
     }
   }
   animation: changeOpacity 1.5s;
+  @media screen and (max-width: 800px) {
+    max-width: 380px;
+    width: 100%;
+    height: 200px;
+  }
 `;
 
 export const ReviewButton = styled.button`
   margin-top: 65px;
   margin-bottom: 92px;
   height: 50px;
-  width: 350px;
+  max-width: 350px;
+  width: calc(100% - 40px);
   line-height: 50px;
   font-size: 18px;
   font-weight: 500;

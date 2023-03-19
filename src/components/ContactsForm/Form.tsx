@@ -18,6 +18,7 @@ export const FormValidation = (props: any) => {
     const target = event.target;
     var value = target.value;
     const name = target.name;
+    console.log(name, value);
     setFormState({
       ...formState,
       [name]: value
@@ -49,14 +50,17 @@ export const FormValidation = (props: any) => {
         nameError,
         phoneNumberError
       });
+      return false;
     }
     return true;
   };
 
   const handleSubmit = (event: React.FormEvent<HTMLInputElement>) => {
     event?.preventDefault();
-    if (validate()) {
-      props.onSubmit([formState]);
+    let validateResult = validate();
+    if (validateResult) {
+      console.log('FORM STATE', formState);
+      props.onSubmit();
       setFormState(initialState);
     }
   };

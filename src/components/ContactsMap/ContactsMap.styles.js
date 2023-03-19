@@ -15,6 +15,10 @@ export const Map = styled.iframe`
   position: absolute;
   width: 100%;
   height: 100%;
+  @media screen and (max-width: 1200px) {
+    position: relative;
+    min-height: 615px;
+  }
 `;
 
 export const ContactsContainer = styled.div`
@@ -33,6 +37,24 @@ export const ContactsContainer = styled.div`
     font-size: 25px;
     font-weight: 400;
     margin-bottom: 34px;
+  }
+
+  ul li a i {
+    background-color: white;
+  }
+  @media screen and (max-width: 1200px) {
+    left: 20px;
+    height: 220px;
+    width: 300px;
+    padding-top: 20px;
+    h3 {
+      margin-bottom: 15px;
+    }
+  }
+  @media screen and (max-width: 340px) {
+    position: relative;
+    left: 0;
+    width: 100%;
   }
 `;
 

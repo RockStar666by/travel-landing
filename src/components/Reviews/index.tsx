@@ -25,18 +25,18 @@ export const Reviews = () => {
   const [position, setPosition] = useState(0);
 
   useEffect(() => {
-    const interval = setInterval(() => handleRightArrowClick(), 6000);
+    const interval = setInterval(() => handleRightArrowClick(), 600000);
     return () => clearTimeout(interval);
   });
 
   const handleLeftArrowClick = () => {
     if (currentSlide > 0) {
       setCurrentSlide(currentSlide - 1);
-      setPosition(position - 660);
+      setPosition(position - 25);
     }
     if (currentSlide === 0) {
       setCurrentSlide(slides.length - 1);
-      setPosition((slides.length - 1) * 660);
+      setPosition((slides.length - 1) * 25);
     }
     console.log(position);
   };
@@ -44,7 +44,7 @@ export const Reviews = () => {
   const handleRightArrowClick = () => {
     if (currentSlide < slides.length - 1) {
       setCurrentSlide(currentSlide + 1);
-      setPosition(position + 660);
+      setPosition(position + 25);
     }
     if (currentSlide === slides.length - 1) {
       setCurrentSlide(0);
@@ -54,7 +54,7 @@ export const Reviews = () => {
 
   const goToSlide = (slideIndex: number) => {
     setCurrentSlide(slideIndex);
-    setPosition(660 * slideIndex);
+    setPosition(25 * slideIndex);
   };
 
   return (
@@ -63,7 +63,7 @@ export const Reviews = () => {
         <SlidesContainer>
           <ArrowLeft onClick={handleLeftArrowClick} />
           <SlidesWrapper>
-            <SlidesItems style={{ transform: `translateX(-${position}px)` }}>
+            <SlidesItems style={{ transform: `translateX(-${position}%)` }}>
               {slides.map(({ avatar, header, review }) => {
                 return (
                   <Slide key={header}>
