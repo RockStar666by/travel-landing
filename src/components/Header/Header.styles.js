@@ -99,8 +99,9 @@ export const NavList = styled.ul`
         border: none;
       }
       &.active {
-        border: 2px solid black;
+        border: 2px solid #17ba48;
         border-right: none;
+        border-radius: 25px 0 0 25px;
       }
     }
   }
